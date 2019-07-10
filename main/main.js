@@ -41,7 +41,7 @@ const DATA_BASE = [
 
 const isBarcodeValid = (barcode) => !!DATA_BASE.find(item => item.barcode === barcode);
 const findItemInDB = (barcode) => {
-  return isBarcodeValid ? DATA_BASE.find(item => item.barcode === barcode) : null
+  return isBarcodeValid(barcode) ? DATA_BASE.find(item => item.barcode === barcode) : null
 }
 const setItemInSettlementItems = (barcode, settlementItems) => {
   const itemSettled = settlementItems.find(item => item.barcode === barcode);
